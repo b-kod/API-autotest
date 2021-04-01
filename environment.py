@@ -7,7 +7,7 @@ class Environment:
 
     URLS = {
         DEV: '',
-        PROD: '???'
+        PROD: ''
     }
 
     def __init__(self):
