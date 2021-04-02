@@ -84,10 +84,3 @@ class Asserts:
     @staticmethod
     def assert_time_is_less_than(response: Response, max_time=1):
         assert response.elapsed.total_seconds() <= max_time, "Request is too long."
-
-    @staticmethod
-    def _get_cookies(cookie_jar):
-        domain = '.playground.learnqa.ru'
-        cookie_dict = cookie_jar.get_dict(domain=domain)
-        found = ['%s=%s' % (name, value) for (name, value) in cookie_dict.items()]
-        return ';'.join(found)
